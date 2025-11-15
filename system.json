@@ -20,9 +20,7 @@
     "verified": "12"
   },
   "esmodules": [
-    "module/shinobiNoSho.mjs",
-    "module/actor.mjs",
-    "module/actor-sheet.mjs"
+    "module/shinobiNoSho.mjs"
   ],
   "styles": [
     "css/shinobiNoSho.css"
