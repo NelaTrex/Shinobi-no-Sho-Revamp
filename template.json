@@ -1,0 +1,1022 @@
+{
+	"Actor": {
+		"types": ["Ninja", "NPC"],
+		"template": {},
+		"Ninja": {
+			"templates": [],
+			"abilities": {
+				"for": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"des": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"agi": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"per": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"int": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"vig": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"esp": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"car": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"man": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"combate": {
+					"CC": {
+						"value": null,
+						"base": 3,
+						"bonus": null,
+						"ability": "for",
+						"skill": ""
+					},
+					"CD": {
+						"value": null,
+						"base": 3,
+						"bonus": null,
+						"ability": "des",
+						"skill": ""
+					},
+					"E": {
+						"value": null,
+						"base": 3,
+						"bonus": null,
+						"ability": "agi",
+						"skill": ""
+					},
+					"LM": {
+						"value": null,
+						"base": 3,
+						"bonus": null,
+						"ability": "per",
+						"skill": ""
+					}
+				}
+			},
+			"attributes": {
+				"vitalidade": {
+					"max": 10,
+					"temp": 0,
+					"tempmax": 0,
+					"value": 0,
+					"mult": 3,
+					"ability": "vig",
+					"multNivel": 5,
+					"bonus": null
+				},
+				"chakra": {
+					"max": 0,
+					"temp": 0,
+					"tempmax": 0,
+					"value": 0,
+					"mult": 3,
+					"ability": "esp",
+					"bonus": null
+				},
+				"movement": {
+					"unidade": "m",
+					"base": 10,
+					"bonus": null,
+					"andar": 0,
+					"nadar": 0,
+					"ability": "agi",
+					"escalar": 0,
+					"divisor": 2
+				},
+				"init": {
+					"ability": "agi",
+					"bonus": null,
+					"skill": "prontidao",
+					"value": null,
+					"roll": {
+						"max": null,
+						"min": null,
+						"mode": 0
+					}
+				},
+				"reacaoEsquiva": {
+					"value": null,
+					"combatAbility": "E",
+					"bonus": null,
+					"variavel": 9
+				},
+				"absorcao": {
+						"max": 0,
+						"temp": 0,
+						"tempmax": 0,
+						"value": 0
+					},
+					"dureza": {
+						"value": null
+					}
+			},
+			"details": {
+				"nivelCampanha": 4,
+				"nivelShinobi": "Genin",
+				"tamanho": "medio",
+				"nome": "",
+				"idade": "",
+				"cla": "",
+				"vilaOrigem": "",
+				"vilaAtuante": "",
+				"tendencia": "",
+				"genero": "",
+				"lateralidade": "",
+				"naturezaPrincipal": "",
+				"naturezaSecundaria": "",
+				"anotacoes": "",
+				"biografia": {
+					"familia": [],
+					"historia": "",
+					"caract": {
+						"campo1": {
+							"value": ""
+						},
+						"campo2": {
+							"value": ""
+						},
+						"campo3": {
+							"value": ""
+						}
+					}
+				}
+			},        
+			"currency": {
+				"ryos": 100
+			},
+			"skills": {
+				"geral": {
+					"acrobacia": {
+						"ability": "agi",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"arte": {
+						"ability": "int",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"atletismo": {
+						"ability": "for",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"ciencias": {
+						"ability": "int",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"cultura": {
+						"ability": "int",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"ocultismo": {
+						"ability": "int",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"concentracao": {
+						"ability": "int",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"disfarces": {
+						"ability": "per",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"escapar": {
+						"ability": "des",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"furtividade": {
+						"ability": "agi",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"animais": {
+						"ability": "per",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"mecanismos": {
+						"ability": "int",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"medicina": {
+						"ability": "int",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"prestidigitacao": {
+						"ability": "des",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"procurar": {
+						"ability": "per",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"prontidao": {
+						"ability": "per",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"rastrear": {
+						"ability": "per",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"veneficio": {
+						"ability": "int",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"voo": {
+						"ability": "agi",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"pericia_1": {
+						"nome": "",
+						"ability": "for",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false,
+							"livre": true
+						}
+					}
+				},
+				"social": {
+					"atuacao": {
+						"ability": "car",
+						"value": null,
+						"bonus": null,
+						"custom": "arte",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"mudarAtitude": {
+						"ability": "man",
+						"value": null,
+						"bonus": null,
+						"custom": "per",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"barganha": {
+						"ability": "car",
+						"value": null,
+						"bonus": null,
+						"custom": "per",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"blefar": {
+						"ability": "man",
+						"value": null,
+						"bonus": null,
+						"custom": "int",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"intimidacao": {
+						"ability": "man",
+						"value": null,
+						"bonus": null,
+						"custom": "per",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"obterInfo": {
+						"ability": "car",
+						"value": null,
+						"bonus": null,
+						"custom": "int",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					}
+				}
+			},
+		
+			"configuracoes": {
+				"label": "Configurações de Regra",
+				"alcanceArmaCCUsada": { "type": "Number", "value": 1, "label": "Alcance da Arma CC Usada" },
+				"durezaManual": { "type": "Number", "value": 0, "label": "Dureza Manual" },
+				"coracoesDoJiongu": { "type": "Number", "value": 0, "label": "Corações do Jiongu" },
+				"corRecursoExtra": { "type": "String", "value": "#a00000", "label": "Cor do Recurso Extra (HEX)" },
+				"regra3PtsPoderPorNivel": { "type": "Boolean", "value": false, "label": "3 Pts de Poder por Nível" },
+				"regraKikaichuu": { "type": "Boolean", "value": false, "label": "Kikaichuu (Aburame)" },
+				"aptidoesNaoRestritas": { "type": "Boolean", "value": false, "label": "Aptidões Não Restritas" },
+				"combateDefensivo": { "type": "Boolean", "value": false, "label": "Combate Defensivo" },
+				"diligente": { "type": "Boolean", "value": false, "label": "Diligente" },
+				"quimico": { "type": "Boolean", "value": false, "label": "Químico" },
+				"velocista": { "type": "Boolean", "value": false, "label": "Velocista" },
+				"shunjutsuNivel1": { "type": "Boolean", "value": false, "label": "Shunjutsu Nível 1" },
+				"shunjutsuNivel3": { "type": "Boolean", "value": false, "label": "Shunjutsu Nível 3" },
+				"burroDeCarga": { "type": "Boolean", "value": false, "label": "Burro de Carga" },
+				"acelerado": { "type": "Boolean", "value": false, "label": "Acelerado (Condição Simples)" },
+				"acuidade": { "type": "Boolean", "value": false, "label": "Acuidade" },
+				"anatomiaGemea": { "type": "Boolean", "value": false, "label": "Anatomia Gêmea" },
+				"armaduraOsseaKaguya": { "type": "Boolean", "value": false, "label": "Armadura Óssea (Kaguya)" },
+				"byakugouNoIn": { "type": "Boolean", "value": false, "label": "Byakugou no In" },
+				"chakraExpandido": { "type": "Boolean", "value": false, "label": "Chakra Expandido" },
+				"cloneReservaZetsu": { "type": "Boolean", "value": false, "label": "Clone Reserva (Zetsu)" },
+				"controlePerfeitoNivel1": { "type": "Boolean", "value": false, "label": "Controle Perfeito Nível 1" },
+				"controlePerfeitoNivel2": { "type": "Boolean", "value": false, "label": "Controle Perfeito Nível 2" },
+				"corpulenciaAkimichi": { "type": "Boolean", "value": false, "label": "Corpulência (Akimichi)" },
+				"furtividadePerceptiva": { "type": "Boolean", "value": false, "label": "Furtividade Perceptiva" },
+				"instintoDeBatalha": { "type": "Boolean", "value": false, "label": "Instinto de Batalha" },
+				"bonecoDeJashin": { "type": "Boolean", "value": false, "label": "Boneco de Jashin" },
+				"senjutsuAtivo": { "type": "Boolean", "value": false, "label": "Senjutsu Ativo" },
+				"pontosKamiArte": { "type": "Boolean", "value": false, "label": "Pontos Kami Arte (Deidara)" },
+				"pontosKamiEspirito": { "type": "Boolean", "value": false, "label": "Pontos Kami Espírito (Sasori)" },
+				"pontosDeVisaoMangekyo": { "type": "Boolean", "value": false, "label": "Pontos de Visão Mangekyo" },
+				"pontosDeSaudeKujaku": { "type": "Boolean", "value": false, "label": "Pontos de Saúde Kujaku" },
+				"pontosSuikaHozuki": { "type": "Boolean", "value": false, "label": "Pontos Suika (Hozuki)" }
+			},
+			"databook": {
+				"label": "Informações Biográficas",
+				"lema": { "type": "String", "value": "", "label": "Lema | Seu Jeito Ninja" },
+				"biografia": { "type": "String", "value": "", "label": "Biografia" },
+				"curiosidades": { "type": "String", "value": "", "label": "Curiosidades" },
+				"estatisticaNinjutsu": { "type": "Number", "value": 0, "label": "Estatística Ninjutsu" },
+				"estatisticaTaijutsu": { "type": "Number", "value": 0, "label": "Estatística Taijutsu" },
+				"estatisticaGenjutsu": { "type": "Number", "value": 0, "label": "Estatística Genjutsu" },
+				"estatisticaControle": { "type": "Number", "value": 0, "label": "Estatística Controle" },
+				"estatisticaForca": { "type": "Number", "value": 0, "label": "Estatística Força" },
+				"estatisticaResistencia": { "type": "Number", "value": 0, "label": "Estatística Resistência" },
+				"estatisticaVelocidade": { "type": "Number", "value": 0, "label": "Estatística Velocidade" },
+				"estatisticaInteligencia": { "type": "Number", "value": 0, "label": "Estatística Inteligência" },
+				"estatisticaPercepcao": { "type": "Number", "value": 0, "label": "Estatística Percepção" }
+			}
+		},
+		"NPC": {
+			"templates": [],
+			"abilities": {
+				"for": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"des": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"agi": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"per": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"int": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"vig": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"esp": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"car": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"man": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"combate": {
+					"CC": {
+						"value": null,
+						"bonus": null
+					},
+					"CD": {
+						"value": null,
+						"bonus": null
+					},
+					"E": {
+						"value": null,
+						"bonus": null
+					},
+					"LM": {
+						"value": null,
+						"bonus": null
+					}
+				}
+			},
+			"attributes": {
+				"vitalidade": {
+					"max": 10,
+					"temp": 0,
+					"tempmax": 0,
+					"value": 0,
+					"bonus": null
+				},
+				"chakra": {
+					"max": 0,
+					"temp": 0,
+					"tempmax": 0,
+					"value": 0,
+					"bonus": null
+				},
+				"movement": {
+					"unidade": "m",
+					"base": 10,
+					"bonus": null,
+					"andar": 0,
+					"nadar": 0
+				},
+				"init": {
+					"bonus": null,
+					"value": null,
+					"roll": {
+						"max": null,
+						"min": null,
+						"mode": 0
+					}
+				},
+				"reacaoEsquiva": {
+					"value": null,
+					"bonus": null,
+					"variavel": 9
+				},
+				"absorcao": {
+						"max": 0,
+						"temp": 0,
+						"tempmax": 0,
+						"value": 0
+					},
+				"dureza": {
+					"value": null
+				}
+			},
+			"details": {
+				"nivelCampanha": 4,
+				"nivelShinobi": "Genin",
+				"tamanho": "medio",
+				"nome": "",
+				"descricao": ""
+			},
+			"skills": {
+				"geral": {
+					"acrobacia": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"arte": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"atletismo": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"ciencias": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"cultura": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"ocultismo": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"concentracao": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"disfarces": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"escapar": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"furtividade": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"animais": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"mecanismos": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"medicina": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"prestidigitacao": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"procurar": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"prontidao": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"rastrear": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"veneficio": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"voo": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"pericia_1": {
+						"nome": "",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false,
+							"livre": true
+						}
+					}
+				},
+				"social": {
+					"atuacao": {
+						"value": null,
+						"bonus": null,
+						"custom": "arte",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"mudarAtitude": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"barganha": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"blefar": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"intimidacao": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"obterInfo": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					}
+				}
+			}
+		}
+	},
+	"Item": {
+		"types": ["armas", "armaduras", "gerais", "aptidoes", "poderes", "tecnicas"],
+		"templates": {
+			"base": {
+				"descricao": ""
+			},
+			"fisico": {
+				"peso": 1,
+				"preco": 0,
+				"quantidade": 1,
+				"compartimentos": {
+					"qtdItem": null,
+					"compartOcupa": null
+				},
+				"rarity": "common"
+			},
+			"areaTemplate": {
+				"areaTemplate": []
+			}
+		},
+		"armas": {
+			"templates": ["base", "fisico", "areaTemplate"],
+			"combate": {
+				"ataque": {
+					"habilidadeCombate": "",
+					"bonus": null
+				},
+				"alcance": {
+					"tipo": "",
+					"outro": ""
+				},
+				"dano": {
+					"critico": 16,
+					"base": null,
+					"bonus": "",
+					"tipo": "",
+					"parts": []
+				}
+			},
+			"detalhes": {
+				"tipo": "",
+				"subtipo": "",
+				"tamanho": "",
+				"preRequisito": "",
+				"caract": {
+					"improvisada": false,
+					"armaDupla": false,
+					"arremessavel": false,
+					"duasMaos": false,
+					"energizavel": false,
+					"ambidestra": false,
+					"acuidade": false
+				}
+			}
+		},
+		"armaduras": {
+			"templates": ["base", "fisico"],
+			"tipo": "",
+			"penalidade": "",
+			"bonusAbsorcao": null,
+			"dureza": 0
+		},
+		"gerais": {
+			"templates": ["base", "fisico", "areaTemplate"],
+			"areaTemplate": [],
+			"tipo": "",
+			"usos": {
+				"value": 1,
+				"max": 1
+			}
+		},
+		"aptidoes": {
+			"templates": ["base"],
+			"caracteristicas": "",
+			"tipoAptidao": "",
+			"nivelAptidao": 0,
+			"preRequisito": ""
+		},
+		"poderes": {
+			"templates": ["base"],
+			"preRequisito": "",
+			"caracteristicas": "",
+			"nivelPoder": 0,
+			"efeitosAdquiridos": []
+		},
+		"tecnicas": {
+			"templates": ["base", "areaTemplate"],
+			"combate": {
+				"dano": {
+					"value": null
+				},
+				"dureza": null,
+				"critico": null,
+				"efeitosOuAptidoes": "",
+				"duracao": "",
+				"areaEfeito": {
+					"tipo": "",
+					"outro": ""
+				},
+				"alcance": {
+					"tipo": "",
+					"outro": ""
+				},
+				"acao": "",
+				"alvo": "",
+				"testeResistencia": ""
+			},
+			"detalhes": {
+				"origem": "",
+				"tipo": "",
+				"subtipo": "",
+				"custoChakra": "",
+				"tipoCustoChakra": "",
+				"elemento": {
+					"tipo": "",
+					"outro": ""
+				},
+				"tipoJutsu": "",
+				"ranking": "",
+				"preRequisito": "",
+				"caract": {
+					"selos": false,
+					"escalonaChakra": false
+				}
+			}
+		},
+
+		"kugutsu": {
+			"marionetista": {
+				"pontosRestantes": { "type": "Number", "value": 4, "label": "Pontos Restantes" },
+				"alcanceControle": { "type": "Number", "value": 10, "label": "Alcance de Controle" },
+				"deslocMarionete": { "type": "Number", "value": 10, "label": "Deslocamento da Marionete" },
+				"alcanceCD": { "type": "Number", "value": 3, "label": "Alcance CD" },
+				"marionetesPorCena": { "type": "Number", "value": 0, "label": "Marionetes por Cena" },
+				"marionetesPorTurno": { "type": "Number", "value": 0, "label": "Marionetes por Turno" },
+				"nomeDispositivo1": { "type": "String", "value": "", "label": "Nome do Dispositivo 1" },
+				"nomeDispositivo2": { "type": "String", "value": "", "label": "Nome do Dispositivo 2" },
+				"nivelDispositivo1": { "type": "String", "value": "PADRÃO", "label": "Nível Dispositivo 1" },
+				"nivelDispositivo2": { "type": "String", "value": "PADRÃO", "label": "Nível Dispositivo 2" },
+				"danoBase": { "type": "String", "value": "X", "label": "Dano Base" }
+			},
+			"marionete": {
+				"tamanho": { "type": "String", "value": "MÉDIA", "label": "Tamanho" },
+				"dureza": { "type": "Number", "value": 1, "label": "Dureza Base" },
+				"absorcaoTotal": { "type": "Number", "value": 0, "label": "Absorção Total" },
+				"absorcaoPerdida": { "type": "Number", "value": 0, "label": "Absorção Perdida" },
+				"absorcaoAtual": { "type": "Number", "value": 0, "label": "Absorção Atual" },
+				"especialistaDispositivo": { "type": "Boolean", "value": false, "label": "Especialista Dispositivo" },
+				"barraAbsorcao": { "type": "String", "value": "", "label": "Barra de Absorção (Cálculo)" }
+			},
+			"parametros": {
+				"compartimentos": { "type": "Number", "value": 3, "label": "Compartimentos" },
+				"armadura": { "type": "Boolean", "value": false, "label": "Armadura" },
+				"armazem": { "type": "Number", "value": 6, "label": "Armazém" },
+				"dEscudoChakra": { "type": "Number", "value": 0, "label": "D. Escudo de Chakra" },
+				"difFacasOcultas": { "type": "Number", "value": 9, "label": "Dif. Facas Ocultas" },
+				"coneLancaChamas": { "type": "String", "value": "0m", "label": "Cone Lança Chamas" },
+				"durezaParede": { "type": "Number", "value": 2, "label": "Dureza Parede" },
+				"difEstrang": { "type": "Number", "value": 8, "label": "Dif. Estrangulamento" },
+				"aptidoes": { "type": "Number", "value": 0, "label": "Aptidões" },
+				"aptArmada": { "type": "Number", "value": 0, "label": "Aptidão Armada" }
+			}
+		},
+		"kuchiyose": {
+			"especie": { "type": "String", "value": "", "label": "Espécie" },
+			"nc": { "type": "Number", "value": 4, "label": "Nível de Campanha" },
+			"tamanho": { "type": "String", "value": "MÉDIO", "label": "Tamanho" },
+			"idade": { "type": "String", "value": "", "label": "Idade" },
+			"anotacoes": { "type": "String", "value": "", "label": "Anotações" },
+			"vitalidadeBase": { "type": "Number", "value": 15, "label": "Vitalidade Base" },
+			"chakraBase": { "type": "Number", "value": 10, "label": "Chakra Base" }
+		}
+	}
+}

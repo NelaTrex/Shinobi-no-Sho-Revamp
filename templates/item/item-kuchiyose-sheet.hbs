@@ -1,0 +1,32 @@
+<form class="{{cssClass}} shinobi-item-sheet" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Nome da Invocação"/></h1>
+            <div class="item-subtitle">Invocação | Kuchiyose</div>
+        </div>
+    </header>
+
+    <section class="sheet-body">
+        <div class="grid grid-3col">
+            <div class="form-group"><label>Espécie</label><input type="text" name="data.especie.value" value="{{data.especie.value}}"/></div>
+            <div class="form-group"><label>Nível de Campanha</label><input type="number" name="data.nc.value" value="{{data.nc.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Tamanho</label><input type="text" name="data.tamanho.value" value="{{data.tamanho.value}}"/></div>
+        </div>
+        
+        <div class="form-group"><label>Idade</label><input type="text" name="data.idade.value" value="{{data.idade.value}}"/></div>
+
+        <hr/>
+        <h3>Estatísticas Base para Criação do Ator</h3>
+        <p class="notes">Use estes valores para criar a ficha de Ator NPC da sua Invocação.</p>
+        <div class="grid grid-2col">
+            <div class="form-group"><label>Vitalidade Base</label><input type="number" name="data.vitalidadeBase.value" value="{{data.vitalidadeBase.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Chakra Base</label><input type="number" name="data.chakraBase.value" value="{{data.chakraBase.value}}" data-dtype="Number"/></div>
+        </div>
+
+        <hr/>
+        <h3>Anotações e Detalhes da Invocação</h3>
+        <textarea name="data.anotacoes.value" rows="10">{{data.anotacoes.value}}</textarea>
+        
+    </section>
+</form>

@@ -1,0 +1,417 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+		<div class="profile">
+			<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="125" width="125"/>
+			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Nome"/></h1>
+		</div>
+    <div class="header-fields">
+      <div class="resources grid grid-3col">
+				<div class="resource">
+					<label for="system.details.nivelCampanha" class="resource-label">
+						{{localize "shinobiNoSho.NinjaSheet.nivelCampanha"}}
+					</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          	<input type="text" name="system.details.nivelCampanha" 
+						value="{{system.details.nivelCampanha}}" data-dtype="String"/>
+          </div>
+					<label for="system.details.cla" class="resource-label">Clã</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          	<input type="text" name="system.details.cla" value="{{system.details.cla}}" 
+						data-dtype="String" placeholder="Ex: Uzumaki"/>
+          </div>
+					<label for="system.details.idade" class="resource-label">Idade</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          	<input type="text" name="system.details.idade" value="{{system.details.idade}}" 
+						data-dtype="String" placeholder="Ex: 25 anos"/>
+          </div>
+					<label for="system.details.vilaOrigem" class="resource-label">Vila de Origem</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          	<input type="text" name="system.details.vilaOrigem" value="{{system.details.vilaOrigem}}" 
+						data-dtype="String" placeholder="Ex: Konoha"/>
+          </div>
+				</div>
+        <div class="resource">
+					<label for="system.details.tamanho" class="resource-label">Tamanho</label>
+          <select name="system.details.tamanho" class="item-medium">
+						{{selectOptions tamanhos selected=system.details.tamanho localize=true blank="—"}}
+					</select>
+          <label for="system.details.genero" class="resource-label">Gênero</label>
+          <div class="resource-content flexrow flex-center flex-between">
+						<select name="system.details.genero" class="item-medium">
+							{{selectOptions header.genero selected=system.details.genero localize=true blank="—"}}
+						</select>
+          </div>
+					<label for="system.details.tendencia" class="resource-label">Tendência</label>
+          <div class="resource-content flexrow flex-center flex-between">
+						<select name="system.details.tendencia" class="item-medium">
+							{{selectOptions header.tendencia selected=system.details.tendencia localize=true blank="—"}}
+						</select>
+          </div>
+					<label for="system.details.lateralidade" class="resource-label">Lateralidade</label>
+          <div class="resource-content flexrow flex-center flex-between">
+						<select name="system.details.lateralidade" class="item-medium">
+							{{selectOptions header.lateralidade selected=system.details.lateralidade localize=true blank="—"}}
+						</select>
+          </div>
+        </div>
+				<div class="resource">
+					<label for="system.details.nivelShinobi" class="resource-label">Nível Shinobi</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          	<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+          </div>
+          <label for="system.details.vilaAtuante" class="resource-label">Vila Atuante</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          	<input type="text" name="system.details.vilaAtuante" value="{{system.details.vilaAtuante}}" 
+						data-dtype="String" placeholder="Ex: Suna"/>
+          </div>
+					<label for="system.details.naturezaPrincipal" class="resource-label">Natureza Pr.</label>
+          <div class="resource-content flexrow flex-center flex-between">
+						<select name="system.details.naturezaPrincipal" class="item-medium">
+							{{selectOptions header.afinidade selected=system.details.naturezaPrincipal localize=true blank="—"}}
+						</select>
+          </div>
+					<label for="system.details.naturezaSecundaria" class="resource-label">Natureza Sc.</label>
+          <div class="resource-content flexrow flex-center flex-between">
+						<select name="system.details.naturezaSecundaria" class="item-medium">
+							{{selectOptions header.afinidade selected=system.details.naturezaSecundaria localize=true blank="—"}}
+						</select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+	<div id="middle-content">
+		<div class="atributos">
+			<div class="resource">
+          <div class="resource-content">
+          	<input type="text" name="system.abilities.for.value" 
+						value="{{system.abilities.for.value}}" data-dtype="Number"/>
+          </div>
+					<label for="system.abilities.for.value" class="resource-label rollable" data-roll-type="ability" data-key="for">
+						{{localize "shinobiNoSho.ability.for.abbr"}}
+					</label>
+			</div>
+			<div class="resource">
+          <div class="resource-content">
+          	<input type="text" name="system.abilities.des.value" 
+						value="{{system.abilities.des.value}}" data-dtype="Number"/>
+          </div>
+					<label for="system.abilities.des.value" class="resource-label rollable" data-roll-type="ability" data-key="des">
+						{{localize "shinobiNoSho.ability.des.abbr"}}
+					</label>
+			</div>
+			<div class="resource">
+          <div class="resource-content">
+          	<input type="text" name="system.abilities.agi.value" 
+						value="{{system.abilities.agi.value}}" data-dtype="Number"/>
+          </div>
+					<label for="system.abilities.agi.value" class="resource-label rollable" data-roll-type="ability" data-key="agi">
+						{{localize "shinobiNoSho.ability.agi.abbr"}}
+					</label>
+			</div>
+			<div class="resource">
+          <div class="resource-content">
+          	<input type="text" name="system.abilities.per.value" 
+						value="{{system.abilities.per.value}}" data-dtype="Number"/>
+          </div>
+					<label for="system.abilities.per.value" class="resource-label rollable" data-roll-type="ability" data-key="per">
+						{{localize "shinobiNoSho.ability.per.abbr"}}
+					</label>
+			</div>
+			<div class="resource">
+          <div class="resource-content">
+          	<input type="text" name="system.abilities.int.value" 
+						value="{{system.abilities.int.value}}" data-dtype="Number"/>
+          </div>
+					<label for="system.abilities.int.value" class="resource-label rollable" data-roll-type="ability" data-key="int">
+						{{localize "shinobiNoSho.ability.int.abbr"}}
+					</label>
+			</div>
+			<div class="resource">
+          <div class="resource-content">
+          	<input type="text" name="system.abilities.vig.value" 
+						value="{{system.abilities.vig.value}}" data-dtype="Number"/>
+          </div>
+					<label for="system.abilities.vig.value" class="resource-label rollable" data-roll-type="ability" data-key="vig">
+						{{localize "shinobiNoSho.ability.vig.abbr"}}
+					</label>
+			</div>
+			<div class="resource">
+          <div class="resource-content">
+          	<input type="text" name="system.abilities.esp.value" 
+						value="{{system.abilities.esp.value}}" data-dtype="Number"/>
+          </div>
+					<label for="system.abilities.esp.value" class="resource-label rollable" data-roll-type="ability" data-key="esp">
+						{{localize "shinobiNoSho.ability.esp.abbr"}}
+					</label>
+			</div>
+		</div>
+		<div class="acessoRapido">
+			<div class="resource flex-group-center">
+				<label for="" class="resource-label">Atual / Max</label>
+				<div class="resource-content flex">
+					<input type="text" name="system.attributes.vitalidade.value"
+					 value="{{system.attributes.vitalidade.value}}" data-dtype="Number"/>
+					<input type="text" name="system.attributes.vitalidade.max"
+					 value="{{system.attributes.vitalidade.max}}" data-dtype="Number"/>
+				</div>
+				<label for="" class="resource-label">Vitalidade</label>
+			</div>
+
+			<div class="resource flex-group-center">
+				<label for="" class="resource-label">Atual / Max</label>
+				<div class="resource-content flex">
+					<input type="text" name="system.attributes.chakra.value"
+					 value="{{system.attributes.chakra.value}}" data-dtype="Number"/>
+					<input type="text" name="system.attributes.chakra.max"
+					 value="{{system.attributes.chakra.max}}" data-dtype="Number"/>
+				</div>
+				<label for="" class="resource-label">Chakra</label>
+			</div>
+
+			<div class="resource flex-group-center">
+				<label for="" class="resource-label">Atual / Max</label>
+				<div class="resource-content flex">
+					<input type="text" name="system.attributes.absorcao.value"
+					 value="{{system.attributes.absorcao.value}}" data-dtype="Number"/>
+					<input type="text" name="system.attributes.absorcao.max"
+					 value="{{system.attributes.absorcao.max}}" data-dtype="Number"/>
+				</div>
+				<label for="" class="resource-label">Absorção</label>
+      </div>
+
+			<div class="resource flex-group-center">
+				<label for="" class="resource-label">Atual</label>
+				<div class="resource-content flex">
+					<input type="text" name="system.attributes.dureza.value"
+					 value="{{system.attributes.dureza.value}}" data-dtype="Number"/>
+				</div>
+				<label for="" class="resource-label">Dureza</label>
+      </div>
+		</div>
+	</div>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="biografia">Biografia</a>
+    <a class="item" data-tab="combate">Combate</a>
+    <a class="item" data-tab="pericias">Perícias</a>
+    <a class="item" data-tab="aptidoesPoderes">Aptidões/Poderes</a>
+		<a class="item" data-tab="tecnicas">Técnicas</a>
+		<a class="item" data-tab="inventario">Inventário</a>
+		<a class="item" data-tab="anotacoes">Anotações</a>
+		<a class="item" data-tab="efeitos">Efeitos</a>
+	<a class="item" data-tab="configuracoes"><i class="fas fa-sliders-h"></i> Configurações</a>
+    <a class="item" data-tab="databook"><i class="fas fa-book-open"></i> Databook</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+		{{!-- Biography Tab --}}
+    <div class="tab biografia" data-group="primary" data-tab="biografia">
+			<div class="content">
+			<nav class="sub-tabs sheet-tabs tabs" data-group="secondary">
+				<a class="item" data-tab="historia">História</a>
+				<a class="item" data-tab="caracteristicas">Características</a>
+				<a class="item" data-tab="relacoes">Relações</a>
+  		</nav>
+
+			<section class="sub-body">
+				<div class="tab historia" data-group="secondary" data-tab="historia">
+					<div class="historia container">
+						<h3 class="section-title">História</h3>
+						{{editor system.details.biografia.historia target="system.details.biografia.historia" 
+						rollData=rollData button=true owner=owner editable=editable}}
+					</div>
+				</div>
+
+				<div class="tab caracteristicas" data-group="secondary" data-tab="caracteristicas">
+					<div class="row">
+						<div class="descricao container flex-1">
+							<h3 class="section-title">Descrição Física</h3>
+							{{editor system.details.biografia.caracteristicas.campo1.value 
+							target="system.details.biografia.caracteristicas.campo1.value" 
+							rollData=rollData button=true owner=owner editable=editable}}
+						</div>
+						<div class="manias container flex-1">
+							<h3 class="section-title">Manias e Peculiaridades</h3>
+							{{editor system.details.biografia.caracteristicas.campo2.value 
+							target="system.details.biografia.caracteristicas.campo2.value" 
+							rollData=rollData button=true owner=owner editable=editable}}
+						</div>
+					</div>
+					<div class="filosofia container">
+						<h3 class="section-title">Filosofia de Vida</h3>
+						{{editor system.details.biografia.caracteristicas.campo3.value 
+						target="system.details.biografia.caracteristicas.campo3.value" 
+						rollData=rollData button=true owner=owner editable=editable}}
+					</div>
+				</div>
+
+				<div class="tab relacoes" data-group="secondary" data-tab="relacoes">
+					<div class="container">
+						<h3 class="section-title">Relações Importantes</h3>
+						<div class="resource-titles flex flex-group-center">
+							<label class="flex-1">Parentesco</label>
+							<label class="flex-2">Nome</label>
+							<label class="flex-1">Idade</label>
+							<label class="flex-1">Gênero</label>
+							<label class="flex-1">Carreira</label>
+						</div>
+						{{#each system.details.biografia.familia as |relation i|}}
+							<div class="resource-content flex relation-part" data-relation-part="{{i}}">
+								<input type="text" name="system.details.biografia.familia.{{i}}.0" 
+								value="{{lookup this "0"}}" class="flex-1" data-dtype="String"/>
+								<input type="text" name="system.details.biografia.familia.{{i}}.1" 
+								value="{{lookup this "1"}}" class="flex-2" data-dtype="String"/>
+								<input type="text" name="system.details.biografia.familia.{{i}}.2" 
+								value="{{lookup this "2"}}" class="flex-1" data-dtype="String"/>
+								<input type="text" name="system.details.biografia.familia.{{i}}.3" 
+								value="{{lookup this "3"}}" class="flex-1" data-dtype="String"/>
+								<input type="text" name="system.details.biografia.familia.{{i}}.4" 
+								value="{{lookup this "4"}}" class="flex-1" data-dtype="String"/>
+								<a class="relations-control delete-relation"><i class="fas fa-trash"></i></a>
+							</div>
+						{{/each}}
+						<div class="relations-box align-center" style="padding: 5px 0; opacity: 0.6;">
+							<a class="relations-control add-relation"><i class="fas fa-plus"></i> Adicionar uma relação</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			</div>
+    </div>
+			<div class="tab configuracoes" data-group="primary" data-tab="configuracoes">
+			<div class="configuracoes-grid">
+				<h3>Variáveis Imputáveis e Cor de Recurso</h3>
+				<div class="form-group"><label>Cor Recurso Extra</label><input type="color" name="data.configuracoes.corRecursoExtra.value" value="{{data.configuracoes.corRecursoExtra.value}}" data-dtype="String"/></div>
+				<div class="form-group"><label>Alcance Arma CC</label><input type="number" name="data.configuracoes.alcanceArmaCCUsada.value" value="{{data.configuracoes.alcanceArmaCCUsada.value}}" data-dtype="Number"/></div>
+				<div class="form-group"><label>Dureza Manual</label><input type="number" name="data.configuracoes.durezaManual.value" value="{{data.configuracoes.durezaManual.value}}" data-dtype="Number"/></div>
+				<div class="form-group"><label>Corações Jiongu</label><input type="number" name="data.configuracoes.coracoesDoJiongu.value" value="{{data.configuracoes.coracoesDoJiongu.value}}" data-dtype="Number"/></div>
+				
+				<h3>Regras e Aptidões Livres</h3>
+				<div class="form-group checkbox"><label>3 Pts Poder / Nível</label><input type="checkbox" name="data.configuracoes.regra3PtsPoderPorNivel.value" {{checked data.configuracoes.regra3PtsPoderPorNivel.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Kikaichuu (Aburame)</label><input type="checkbox" name="data.configuracoes.regraKikaichuu.value" {{checked data.configuracoes.regraKikaichuu.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Aptidões Não Restritas</label><input type="checkbox" name="data.configuracoes.aptidoesNaoRestritas.value" {{checked data.configuracoes.aptidoesNaoRestritas.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Combate Defensivo</label><input type="checkbox" name="data.configuracoes.combateDefensivo.value" {{checked data.configuracoes.combateDefensivo.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Diligente</label><input type="checkbox" name="data.configuracoes.diligente.value" {{checked data.configuracoes.diligente.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Químico</label><input type="checkbox" name="data.configuracoes.quimico.value" {{checked data.configuracoes.quimico.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Velocista</label><input type="checkbox" name="data.configuracoes.velocista.value" {{checked data.configuracoes.velocista.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Shunjutsu Nível 1</label><input type="checkbox" name="data.configuracoes.shunjutsuNivel1.value" {{checked data.configuracoes.shunjutsuNivel1.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Shunjutsu Nível 3</label><input type="checkbox" name="data.configuracoes.shunjutsuNivel3.value" {{checked data.configuracoes.shunjutsuNivel3.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Burro de Carga</label><input type="checkbox" name="data.configuracoes.burroDeCarga.value" {{checked data.configuracoes.burroDeCarga.value}} data-dtype="Boolean"/></div>
+				
+				<h3>Aptidões e Condições Restritas</h3>
+				<div class="form-group checkbox"><label>Acuidade</label><input type="checkbox" name="data.configuracoes.acuidade.value" {{checked data.configuracoes.acuidade.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Anatomia Gêmea</label><input type="checkbox" name="data.configuracoes.anatomiaGemea.value" {{checked data.configuracoes.anatomiaGemea.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Armadura Óssea (Kaguya)</label><input type="checkbox" name="data.configuracoes.armaduraOsseaKaguya.value" {{checked data.configuracoes.armaduraOsseaKaguya.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Byakugou no In</label><input type="checkbox" name="data.configuracoes.byakugouNoIn.value" {{checked data.configuracoes.byakugouNoIn.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Chakra Expandido</label><input type="checkbox" name="data.configuracoes.chakraExpandido.value" {{checked data.configuracoes.chakraExpandido.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Clone Reserva (Zetsu)</label><input type="checkbox" name="data.configuracoes.cloneReservaZetsu.value" {{checked data.configuracoes.cloneReservaZetsu.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Controle Perfeito N1</label><input type="checkbox" name="data.configuracoes.controlePerfeitoNivel1.value" {{checked data.configuracoes.controlePerfeitoNivel1.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Controle Perfeito N2</label><input type="checkbox" name="data.configuracoes.controlePerfeitoNivel2.value" {{checked data.configuracoes.controlePerfeitoNivel2.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Corpulência (Akimichi)</label><input type="checkbox" name="data.configuracoes.corpulenciaAkimichi.value" {{checked data.configuracoes.corpulenciaAkimichi.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Furtividade Perceptiva</label><input type="checkbox" name="data.configuracoes.furtividadePerceptiva.value" {{checked data.configuracoes.furtividadePerceptiva.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Instinto de Batalha</label><input type="checkbox" name="data.configuracoes.instintoDeBatalha.value" {{checked data.configuracoes.instintoDeBatalha.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Boneco de Jashin</label><input type="checkbox" name="data.configuracoes.bonecoDeJashin.value" {{checked data.configuracoes.bonecoDeJashin.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Senjutsu Ativo</label><input type="checkbox" name="data.configuracoes.senjutsuAtivo.value" {{checked data.configuracoes.senjutsuAtivo.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Acelerado</label><input type="checkbox" name="data.configuracoes.acelerado.value" {{checked data.configuracoes.acelerado.value}} data-dtype="Boolean"/></div>
+
+				<h3>Recursos Extras Condicionais</h3>
+				<div class="form-group checkbox"><label>Pts Kami Arte</label><input type="checkbox" name="data.configuracoes.pontosKamiArte.value" {{checked data.configuracoes.pontosKamiArte.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Pts Kami Espírito</label><input type="checkbox" name="data.configuracoes.pontosKamiEspirito.value" {{checked data.configuracoes.pontosKamiEspirito.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Pts Visão Mangekyo</label><input type="checkbox" name="data.configuracoes.pontosDeVisaoMangekyo.value" {{checked data.configuracoes.pontosDeVisaoMangekyo.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Pts Saúde Kujaku</label><input type="checkbox" name="data.configuracoes.pontosDeSaudeKujaku.value" {{checked data.configuracoes.pontosDeSaudeKujaku.value}} data-dtype="Boolean"/></div>
+				<div class="form-group checkbox"><label>Pts Suika (Hozuki)</label><input type="checkbox" name="data.configuracoes.pontosSuikaHozuki.value" {{checked data.configuracoes.pontosSuikaHozuki.value}} data-dtype="Boolean"/></div>
+			</div>
+		</div>
+
+{{!-- Conteúdo da Aba DATABOOK --}}
+<div class="tab databook" data-group="primary" data-tab="databook">
+    <h3>Informações Biográficas</h3>
+    <div class="databook-content">
+        <div class="form-group"><label>Lema | Seu Jeito Ninja</label><input type="text" name="data.databook.lema" value="{{data.databook.lema}}" placeholder="O jeito ninja do personagem"/></div>
+        
+        <div class="form-group biography"><label>Biografia</label><textarea name="data.databook.biografia" rows="10">{{data.databook.biografia}}</textarea></div>
+        <div class="form-group curiosidades"><label>Curiosidades</label><textarea name="data.databook.curiosidades" rows="5">{{data.databook.curiosidades}}</textarea></div>
+        
+        <h4>Estatísticas Shinobi (Databook)</h4>
+        <div class="databook-stats grid grid-3col">
+            <div class="form-group"><label>Ninjutsu</label><input type="number" name="data.databook.estatisticaNinjutsu.value" value="{{data.databook.estatisticaNinjutsu.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Taijutsu</label><input type="number" name="data.databook.estatisticaTaijutsu.value" value="{{data.databook.estatisticaTaijutsu.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Genjutsu</label><input type="number" name="data.databook.estatisticaGenjutsu.value" value="{{data.databook.estatisticaGenjutsu.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Controle</label><input type="number" name="data.databook.estatisticaControle.value" value="{{data.databook.estatisticaControle.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Força</label><input type="number" name="data.databook.estatisticaForca.value" value="{{data.databook.estatisticaForca.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Resistência</label><input type="number" name="data.databook.estatisticaResistencia.value" value="{{data.databook.estatisticaResistencia.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Velocidade</label><input type="number" name="data.databook.estatisticaVelocidade.value" value="{{data.databook.estatisticaVelocidade.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Inteligência</label><input type="number" name="data.databook.estatisticaInteligencia.value" value="{{data.databook.estatisticaInteligencia.value}}" data-dtype="Number"/></div>
+            <div class="form-group"><label>Percepção</label><input type="number" name="data.databook.estatisticaPercepcao.value" value="{{data.databook.estatisticaPercepcao.value}}" data-dtype="Number"/></div>
+        </div>
+    </div>
+</div>
+
+    {{!-- Owned Combat Tab --}}
+    <div class="tab combate" data-group="primary" data-tab="combate">
+			<div class="content">
+    	{{> "systems/shinobinosho/templates/actor/parts/actor-combate.hbs"}}
+			</div>
+    </div>
+
+    {{!-- Owned Skills Tab --}}
+    <div class="tab pericias" data-group="primary" data-tab="pericias">
+			<div class="content">
+				<nav class="pericias-sheet-tabs sheet-tabs tabs" data-group="pericias">
+					<a class="item" data-tab="gerais">Perícias Gerais</a>
+					<a class="item" data-tab="sociais">Perícias Sociais</a>
+				</nav>
+
+				<div class="pericias-sheet-body">
+					<div class="content">
+						{{> "systems/shinobinosho/templates/actor/parts/actor-pericias.hbs"}}
+					</div>
+				</div>
+			</div>
+    </div>
+
+    {{!-- Owned Aptitudes and Powers Tab --}}
+    <div class="tab aptidoesPoderes" data-group="primary" data-tab="aptidoesPoderes">
+			<div class="content">
+      {{> "systems/shinobinosho/templates/actor/parts/actor-aptidoesPoderes.hbs"}}
+			</div>
+    </div>
+
+		{{!-- Owned Techniques Tab --}}
+    <div class="tab tecnicas" data-group="primary" data-tab="tecnicas">
+			<div class="content">
+       	{{> "systems/shinobinosho/templates/actor/parts/actor-tecnicas.hbs"}}
+			 </div>
+    </div>
+
+		{{!-- Owned Inventory Tab --}}
+    <div class="tab inventario" data-group="primary" data-tab="inventario">
+			<div class="content">
+					{{> "systems/shinobinosho/templates/actor/parts/actor-inventario.hbs"}}
+				</div>
+			</div>
+    </div>
+
+		{{!-- Owned Notes Tab --}}
+    <div class="tab anotacoes" data-group="primary" data-tab="anotacoes">
+			<div class="content">
+				<div class="anotacoes container">
+					{{editor system.details.anotacoes target="system.details.anotacoes" 
+					rollData=rollData button=true owner=owner editable=editable}}
+				</div>
+			</div>
+    </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab efeitos flexcol" data-group="primary" data-tab="efeitos">
+      {{> "systems/shinobinosho/templates/actor/parts/actor-efeitos.hbs"}}
+    </div>
+
+  </section>
+</form>

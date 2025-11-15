@@ -1,0 +1,74 @@
+<form class="{{cssClass}} shinobi-item-sheet" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Nome da Marionete"/></h1>
+            <div class="item-subtitle">Marionete | Kugutsu</div>
+        </div>
+    </header>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="marionetista"><i class="fas fa-user-ninja"></i> Controle</a>
+        <a class="item" data-tab="marionete"><i class="fas fa-cog"></i> Marionete/Parâmetros</a>
+    </nav>
+
+    <section class="sheet-body">
+        
+        {{!-- Aba Marionetista (Informações de Controle) --}}
+        <div class="tab" data-group="primary" data-tab="marionetista">
+            <h3>Controle e Dispositivos</h3>
+            <div class="grid grid-2col resource-container">
+                <div class="form-group"><label>Pontos Restantes</label><input type="number" name="data.marionetista.pontosRestantes.value" value="{{data.marionetista.pontosRestantes.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Alcance de Controle</label><input type="number" name="data.marionetista.alcanceControle.value" value="{{data.marionetista.alcanceControle.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Deslocamento</label><input type="number" name="data.marionetista.deslocMarionete.value" value="{{data.marionetista.deslocMarionete.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Alcance CD</label><input type="number" name="data.marionetista.alcanceCD.value" value="{{data.marionetista.alcanceCD.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Marionetes / Cena</label><input type="number" name="data.marionetista.marionetesPorCena.value" value="{{data.marionetista.marionetesPorCena.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Marionetes / Turno</label><input type="number" name="data.marionetista.marionetesPorTurno.value" value="{{data.marionetista.marionetesPorTurno.value}}" data-dtype="Number"/></div>
+            </div>
+
+            <hr/>
+            <h3>Dispositivos Hitokugutsu Parcial</h3>
+            <div class="grid grid-3col">
+                <div class="form-group"><label>Nome Dispositivo 1</label><input type="text" name="data.marionetista.nomeDispositivo1.value" value="{{data.marionetista.nomeDispositivo1.value}}"/></div>
+                <div class="form-group"><label>Nível</label><select name="data.marionetista.nivelDispositivo1.value" data-dtype="String">{{selectOptions (array "LEVE" "PADRÃO" "PESADO") selected=data.marionetista.nivelDispositivo1.value}}</select></div>
+                <div class="form-group"><label>Dano Base</label><input type="text" name="data.marionetista.danoBase.value" value="{{data.marionetista.danoBase.value}}"/></div>
+
+                <div class="form-group"><label>Nome Dispositivo 2</label><input type="text" name="data.marionetista.nomeDispositivo2.value" value="{{data.marionetista.nomeDispositivo2.value}}"/></div>
+                <div class="form-group"><label>Nível</label><select name="data.marionetista.nivelDispositivo2.value" data-dtype="String">{{selectOptions (array "LEVE" "PADRÃO" "PESADO") selected=data.marionetista.nivelDispositivo2.value}}</select></div>
+                <div class="form-group"><label>Dano Base</label><input type="text" name="data.marionetista.danoBase.value" value="{{data.marionetista.danoBase.value}}"/></div>
+            </div>
+        </div>
+
+        {{!-- Aba Marionete/Parâmetros --}}
+        <div class="tab" data-group="primary" data-tab="marionete">
+            <h3>Estatísticas e Absorção</h3>
+            <div class="grid grid-3col">
+                <div class="form-group"><label>Tamanho</label><input type="text" name="data.marionete.tamanho.value" value="{{data.marionete.tamanho.value}}"/></div>
+                <div class="form-group"><label>Dureza Base</label><input type="number" name="data.marionete.dureza.value" value="{{data.marionete.dureza.value}}" data-dtype="Number"/></div>
+                <div class="form-group checkbox"><label>Especialista Dispositivo</label><input type="checkbox" name="data.marionete.especialistaDispositivo.value" {{checked data.marionete.especialistaDispositivo.value}} data-dtype="Boolean"/></div>
+            </div>
+            <div class="grid grid-3col">
+                <div class="form-group"><label>Absorção Total</label><input type="number" name="data.marionete.absorcaoTotal.value" value="{{data.marionete.absorcaoTotal.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Absorção Perdida</label><input type="number" name="data.marionete.absorcaoPerdida.value" value="{{data.marionete.absorcaoPerdida.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Absorção Atual</label><input type="number" name="data.marionete.absorcaoAtual.value" value="{{data.marionete.absorcaoAtual.value}}" data-dtype="Number"/></div>
+            </div>
+            
+            <hr/>
+            <h3>Parâmetros de Construção</h3>
+            <div class="grid grid-4col">
+                <div class="form-group"><label>Compartimentos</label><input type="number" name="data.parametros.compartimentos.value" value="{{data.parametros.compartimentos.value}}" data-dtype="Number"/></div>
+                <div class="form-group checkbox"><label>Armadura</label><input type="checkbox" name="data.parametros.armadura.value" {{checked data.parametros.armadura.value}} data-dtype="Boolean"/></div>
+                <div class="form-group"><label>Armazém</label><input type="number" name="data.parametros.armazem.value" value="{{data.parametros.armazem.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>D. Escudo Chakra</label><input type="number" name="data.parametros.dEscudoChakra.value" value="{{data.parametros.dEscudoChakra.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Dif. Facas Ocultas</label><input type="number" name="data.parametros.difFacasOcultas.value" value="{{data.parametros.difFacasOcultas.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Cone Lança Chamas</label><input type="text" name="data.parametros.coneLancaChamas.value" value="{{data.parametros.coneLancaChamas.value}}"/></div>
+                <div class="form-group"><label>Dureza Parede</label><input type="number" name="data.parametros.durezaParede.value" value="{{data.parametros.durezaParede.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Dif. Estrang.</label><input type="number" name="data.parametros.difEstrang.value" value="{{data.parametros.difEstrang.value}}" data-dtype="Number"/></div>
+            </div>
+            <div class="grid grid-2col">
+                <div class="form-group"><label>Aptidões</label><input type="number" name="data.parametros.aptidoes.value" value="{{data.parametros.aptidoes.value}}" data-dtype="Number"/></div>
+                <div class="form-group"><label>Aptidão Armada</label><input type="number" name="data.parametros.aptArmada.value" value="{{data.parametros.aptArmada.value}}" data-dtype="Number"/></div>
+            </div>
+        </div>
+    </section>
+</form>
