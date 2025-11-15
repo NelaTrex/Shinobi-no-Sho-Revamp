@@ -38,7 +38,10 @@ export class ShinobiActorSheet extends ActorSheet {
   /** @override */
   get template() {
 		const type = this.actor.type.toLowerCase();
-    return `systems/shinobinosho/templates/actor/actor-${type}-sheet.hbs`;
+    if (type === 'ninja') {
+        return `systems/shinobinosho-revamp/templates/actor/ninja-sheet.hbs`;
+    }
+    return `systems/shinobinosho-revamp/templates/actor/actor-${type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
