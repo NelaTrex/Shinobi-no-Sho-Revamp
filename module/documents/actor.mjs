@@ -8,6 +8,9 @@ export class ShinobiActor extends Actor {
         // Prepare data for the actor. Calling the super version of this executes
         // the following, in order: ...
         super.prepareData();
+		if (this.type === 'ninja') {
+            applyConfigLogic(this.system); 
+        }
         
         // --- CHAME A FUNÇÃO DE LÓGICA DE CÁLCULO AQUI ---
         if (this.type === 'ninja') {
