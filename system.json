@@ -43,7 +43,7 @@
     {
       "name": "macros",
       "label": "Macros",
-      "system": "shinobinosho",
+      "system": "shinobinoshorevamp",
       "path": "packs/macros",
       "type": "Macro",
       "ownership": {
