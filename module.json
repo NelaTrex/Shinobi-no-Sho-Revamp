@@ -1,0 +1,37 @@
+{
+  "id": "shinobi-no-sho-revamp-nt", 
+  "title": "Shinobi no Sho - Versão Revamp (NelaTrex)",
+  "description": "Módulo de extensão com as modificações da Ficha V2 (Configurações, Databook, Kugutsu/Kuchiyose).",
+  "version": "1.0.0", 
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11" 
+  },
+  "authors": [
+    {
+      "name": "NelaTrex",
+      "email": "nelatrex.jn@gmail.com"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "shinobinosho",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "esmodules": [
+    "./module/actor.mjs",
+    "./module/actor-sheet.mjs"
+
+  ],
+  "styles": [
+    "./css/shinobi-no-sho.css" 
+  ],
+
+  "manifest": "https://raw.githubusercontent.com/NelaTrex/Shinobi-no-Sho-Revamp/main/module.json",
+  "download": "https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/archive/refs/heads/main.zip",
+  "url": "https://github.com/NelaTrex/Shinobi-no-Sho-Revamp"
+}
