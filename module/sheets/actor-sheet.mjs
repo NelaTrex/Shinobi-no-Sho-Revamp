@@ -36,16 +36,17 @@ export class ShinobiActorSheet extends ActorSheet {
   }
 
   /** @override */
-  get template() {
-		const type = this.actor.type.toLowerCase();
+ get template() {
+    const type = this.actor.type.toLowerCase();
+    
+    // O sistema original usa 'shinobinosho' como ID, vamos manter isso
+    // para evitar conflitos de caminhos.
     if (type === 'ninja') {
-        // USE O ID DO SEU SISTEMA AQUI, EXATAMENTE COMO ESTÁ NO system.json
+        // ASSUMIMOS QUE VOCÊ RENOMEU O HBS PARA 'ninja-sheet.hbs' OU QUE ESTE É O NOME CORRETO.
         return `systems/shinobinosho/templates/actor/ninja-sheet.hbs`; 
-        // OU, se você renomeou o ID do sistema:
-        // return `systems/shinobinosho-revamp/templates/actor/ninja-sheet.hbs`;
     }
-    // Para outros tipos de ator, mantenha a lógica de fallback:
-    return `systems/shinobinosho/templates/actor/actor-${type}-sheet.hbs`; 
+    // Lógica para outros tipos de ator (NPC)
+    return `systems/shinobinosho/templates/actor/actor-${type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
