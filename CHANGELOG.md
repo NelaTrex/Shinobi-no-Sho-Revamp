@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## [1.14.0](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/compare/v1.13.3...v1.14.0) (2025-11-15)
+
+
+### Features
+
+* Atualiza system.json com o novo repositorio e versao 1.14.0. ([21bd709](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/21bd709b0f408dc346a558fdcdefc34d29c8b28f))
+* Implementa ficha V2 completa (Configuracoes, Databook, Kuchiyose/Kugutsu) ([6b9c6c5](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/6b9c6c592ec25fbe67e6983f917e80bc597c02cf))
+
+
+### Bug Fixes
+
+* Corrige erro de sintaxe fatal e alinha caminhos para shinobinoshorevamp ([3d0ea19](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/3d0ea198418c9c2ad0e7deec77712498903fc497))
+* Corrige o ID do sistema no template path para shinobinoshorevamp ([1bbb06b](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/1bbb06bc1a231ef081b59a7eb58eabcd5c2efa95))
+* Corrige o ID do sistema no template path para shinobinoshorevamp ([765fbe0](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/765fbe07f60538e314afe5c7714115e3c091713b))
+* Corrige paths e carregamento de classes para abrir a ficha do Ninja ([d699f90](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/d699f905a9166c643b6221bcbcd973962cec87cb))
+* Corrige paths e carregamento de classes para abrir a ficha do Ninja ([30f4b2f](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/30f4b2f2f82768ca230d2c9c67cf5a9d31e12e9f))
+* Corrige URL de download do system.json para main.zip ([5e9d0cd](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/5e9d0cd2ce8e979aa8ccdf8740f0199f3345894c))
+* Corrige URL de download do system.json para main.zip ([025950e](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/025950ec8f5ee0cbc5ce018628f19a5ca04ff12b))
+* Finaliza o ajuste de carregamento de classes e templates ([b6fc1a9](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/b6fc1a9e7b4396a689a2d46a0618cb41bf74b98f))
+* Finaliza o arquivo de manifesto como module.json e prepara para publicacao no Revamp. ([e62f673](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/e62f67356ed01e3fe307de6fc0964420bf907dea))
+* Finaliza o link de download do system.json para o branch main.zip ([02359fe](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/02359fefd895c4d0b3d07dbbd37cb18c1f369e32))
+* Garante o carregamento das classes customizadas no system.json ([c37dbe6](https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/commit/c37dbe6b12afc2153b4c89697b32524c62e16c1e))
+
 ## [1.13.3](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.2...v1.13.3) (2024-12-14)
 
 

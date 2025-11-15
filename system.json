@@ -20,8 +20,8 @@
     "verified": "12"
   },
   "esmodules": [
-    "module/shinobiNoSho.mjs"   
-],
+    "module/shinobiNoSho.mjs"
+  ],
   "styles": [
     "css/shinobiNoSho.css"
   ],
