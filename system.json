@@ -1,0 +1,64 @@
+{
+  "id": "shinobinosho",
+  "title": "Shinobi no Sho - Versão Revamp (NelaTrex)",
+  "description": "Este é o sistema Shinobi no Sho, agora com as modificações da Ficha V2 (Configurações, Databook, Kugutsu/Kuchiyose) implementadas por NelaTrex.",
+  "authors": [
+    {
+      "name": "NelaTrex",
+      "email": "jn.nelatrex@gmail.com",
+      "discord": "nelatrex",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/NelaTrex/Shinobi-no-Sho-Revamp",
+  "readme": "README.md",
+  "bugs": "https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/issues",
+  "changelog": "CHANGELOG.md",
+  "version": "1.14.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12"
+  },
+  "esmodules": [
+    "module/shinobiNoSho.mjs"
+  ],
+  "styles": [
+    "css/shinobiNoSho.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json",
+      "flags": {}
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "packs": [
+    {
+      "name": "macros",
+      "label": "Macros",
+      "system": "shinobinosho",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "socket": true,
+  "manifest": "https://raw.githubusercontent.com/NelaTrex/Shinobi-no-Sho-Revamp/main/system.json",
+  "download": "https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/releases/download/v1.14.0/shinobinosho-v1.14.0.zip",
+  "grid": {
+    "units": "m"
+  },
+  "primaryTokenAttribute": "attributes.vitalidade",
+  "secondaryTokenAttribute": "attributes.chakra"
+}
