@@ -55,7 +55,7 @@
   ],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/NelaTrex/Shinobi-no-Sho-Revamp/main/system.json",
-  "download": "https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/releases/download/v1.14.0/shinobinosho-v1.14.0.zip",
+  "download": "https://github.com/NelaTrex/Shinobi-no-Sho-Revamp/archive/refs/heads/main.zip",
   "grid": {
     "units": "m"
   },
