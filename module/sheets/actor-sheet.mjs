@@ -43,10 +43,10 @@ export class ShinobiActorSheet extends ActorSheet {
     // para evitar conflitos de caminhos.
     if (type === 'ninja') {
         // ASSUMIMOS QUE VOCÊ RENOMEU O HBS PARA 'ninja-sheet.hbs' OU QUE ESTE É O NOME CORRETO.
-        return `systems/shinobinosho/templates/actor/ninja-sheet.hbs`; 
+        return `systems/shinobinoshorevamp/templates/actor/ninja-sheet.hbs`; 
     }
     // Lógica para outros tipos de ator (NPC)
-    return `systems/shinobinosho/templates/actor/actor-${type}-sheet.hbs`;
+    return `systems/shinobinoshorevamp/templates/actor/actor-${type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
